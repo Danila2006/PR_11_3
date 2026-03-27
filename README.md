@@ -1,16 +1,89 @@
-# pr_11_3
+# 📱 Task Manager App (Flutter)
 
-A new Flutter project.
+## 📌 Опис
 
-## Getting Started
+Task Manager — це Flutter додаток для управління задачами з авторизацією, підтримкою offline режиму та кешуванням даних.
 
-This project is a starting point for a Flutter application.
+Додаток побудований з використанням сучасних підходів:
+- Clean Architecture
+- State management (Riverpod)
+- REST API (Dio)
+- Local storage (Hive)
+- Secure storage для токенів
 
-A few resources to get you started if this is your first Flutter project:
+---
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
+## 🚀 Функціонал
 
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+### 🔐 Авторизація
+- Login (mock)
+- Збереження токена в `flutter_secure_storage`
+- Автологін при запуску додатку
+- Logout
+
+### 📋 Задачі
+- Отримання списку задач з API (JSONPlaceholder)
+- Відображення списку задач
+- Перегляд статусу (completed / active)
+
+### 📡 Offline режим
+- Кешування GET-запитів через Hive
+- Відображення задач без інтернету
+
+---
+
+## 🛠️ Технічний стек
+
+- Flutter
+- Riverpod (state management)
+- Dio (HTTP client)
+- Hive (local cache)
+- flutter_secure_storage (token storage)
+
+---
+
+## 📁 Архітектура
+lib/
+├── core/
+│ ├── network/
+│ ├── storage/
+│ └── error/
+├── features/
+│ ├── auth/
+│ └── tasks/
+└── shared/
+
+
+Архітектура побудована за принципами Clean Architecture:
+- **data** — робота з API та кешем
+- **domain** — бізнес логіка
+- **presentation** — UI + state management
+
+---
+
+## ⚙️ Установка та запуск
+
+### 1. Клонувати репозиторій
+```bash
+git clone https://github.com/your-username/task-manager.git
+
+cd task-manager
+```
+
+### 2. Встановити залежності
+```bash
+flutter pub get
+```
+
+### 3. Запустити додаток
+```bash
+flutter run
+```
+
+---
+
+## 🔑 Дані для входу
+```bash
+Username: test
+Password: 1234
+```
